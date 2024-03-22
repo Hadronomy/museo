@@ -6,7 +6,7 @@
   import { OrbitControls } from '@threlte/extras';
 </script>
 
-<div class="min-h-screen w-full">
+<div class="min-h-dvh w-full">
   <Canvas>
     <Scene />
 
