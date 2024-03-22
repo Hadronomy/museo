@@ -13,6 +13,9 @@
     <XR>
       <Controller left />
       <Controller right />
+
+      <Scene></Scene>
+
       <svelte:fragment slot="fallback">
         <T.PerspectiveCamera makeDefault position.z={5}>
           <OrbitControls />
