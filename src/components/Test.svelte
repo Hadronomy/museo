@@ -25,7 +25,7 @@
       </svelte:fragment>
     </XR>
   </Canvas>
-  <ARButton on:click={(event) => {
-    alert('ARButton clicked');
+  <ARButton on:click={(event, err) => {
+    alert(err);
   }} />
 </div>
