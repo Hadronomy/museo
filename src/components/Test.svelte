@@ -6,22 +6,24 @@
   import { OrbitControls } from '@threlte/extras';
 </script>
 
-<div class="min-h-dvh w-full">
+<div class="relative min-h-dvh w-full">
   <Canvas>
-    <Scene />
-
     <XR>
       <Controller left />
       <Controller right />
 
-      <Scene></Scene>
+      <T.Mesh>
+        <T.BoxGeometry attach="geometry" />
+        <T.MeshBasicMaterial attach="material" />
+      </T.Mesh>
 
       <svelte:fragment slot="fallback">
+        <Scene />
         <T.PerspectiveCamera makeDefault position.z={5}>
           <OrbitControls />
         </T.PerspectiveCamera>
       </svelte:fragment>
     </XR>
-    <ARButton />
   </Canvas>
+  <ARButton />
 </div>
