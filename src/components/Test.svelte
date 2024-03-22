@@ -14,7 +14,7 @@
       <Controller right />
 
       <svelte:fragment slot="fallback">
-        <T.PerspectiveCamera makeDefault position.z={5}>
+        <T.PerspectiveCamera makeDefault position.z={2}>
           <OrbitControls />
         </T.PerspectiveCamera>
       </svelte:fragment>
