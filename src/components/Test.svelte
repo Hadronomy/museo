@@ -22,6 +22,6 @@
         </T.PerspectiveCamera>
       </svelte:fragment>
     </XR>
+    <ARButton />
   </Canvas>
-  <ARButton />
 </div>
