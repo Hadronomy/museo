@@ -2,7 +2,7 @@
   import { Canvas } from '@threlte/core';
   import Scene from './Scene.svelte';
   import { T } from '@threlte/core';
-  import { XR, Controller, VRButton } from '@threlte/xr';
+  import { XR, Controller, XRButton } from '@threlte/xr';
   import { OrbitControls } from '@threlte/extras';
 </script>
 
@@ -20,5 +20,5 @@
       </svelte:fragment>
     </XR>
   </Canvas>
-  <VRButton />
+  <XRButton mode="immersive-ar" />
 </div>
