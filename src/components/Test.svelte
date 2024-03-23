@@ -2,10 +2,13 @@
   import { T, Canvas } from '@threlte/core';
   import { XR, Controller, XRButton } from '@threlte/xr';
   import { OrbitControls, useProgress } from '@threlte/extras';
+  import { Studio, Theatre } from '@threlte/theatre';
   import { tweened } from 'svelte/motion';
   import { fade } from 'svelte/transition';
 
   import Scene from './Scene.svelte';
+
+  const isDev = import.meta.env.DEV;
 
   const { progress } = useProgress();
   const tweenedProgress = tweened($progress, {
@@ -32,8 +35,11 @@
 {/if}
 
 <div class="relative min-h-dvh w-full">
+  <Studio enabled={isDev} />
   <Canvas>
-    <Scene />
+    <Theatre>
+      <Scene />
+    </Theatre>
     <XR>
       <Controller left />
       <Controller right />
@@ -62,7 +68,7 @@
     align-items: center;
     justify-content: center;
     color: black;
-    z-index: 10;
+    z-index: 20;
   }
   .loading {
     font-size: 0.875rem;
