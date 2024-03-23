@@ -50,6 +50,9 @@ dependencies:
   astro:
     specifier: ^4.5.8
     version: 4.5.8(typescript@5.4.3)
+  astro-seo:
+    specifier: ^0.8.3
+    version: 0.8.3(prettier@2.8.8)(typescript@5.4.3)
   babylonjs:
     specifier: ^6.48.1
     version: 6.48.1
@@ -1674,6 +1677,16 @@ packages:
   /arrify@1.0.1:
     resolution: {integrity: sha512-3CYzex9M9FGQjCGMGyi6/31c8GJbgb0qGyrx5HWxPd0aCwh4cB2YjMb2Xf9UuoogrMrlO9cTqnB5rI5GHZTcUA==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /astro-seo@0.8.3(prettier@2.8.8)(typescript@5.4.3):
+    resolution: {integrity: sha512-gQeEh0U2yyVM0iyU8DTORK6hXMy5WH2wufrkUuNOKjI3LnYLniqgDxm1LZPQDuD6b4OHabVOi/5L88A9POCcCQ==}
+    dependencies:
+      '@astrojs/check': 0.5.9(prettier@2.8.8)(typescript@5.4.3)
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+      - typescript
     dev: false
 
   /astro@4.5.8(typescript@5.4.3):
