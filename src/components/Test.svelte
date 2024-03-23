@@ -35,7 +35,7 @@
 {/if}
 
 <div class="relative min-h-dvh w-full">
-  <Studio enabled={isDev} />
+  <Studio enabled={!isDev} />
   <Canvas>
     <Theatre>
       <Scene />
