@@ -1,9 +1,7 @@
 <script>
-  import { Canvas } from '@threlte/core';
-  import { T } from '@threlte/core';
+  import { T, Canvas } from '@threlte/core';
   import { XR, Controller, XRButton } from '@threlte/xr';
-  import { OrbitControls } from '@threlte/extras';
-  import { useProgress } from '@threlte/extras'
+  import { OrbitControls, useProgress } from '@threlte/extras';
   import { tweened } from 'svelte/motion';
   import { fade } from 'svelte/transition';
 
