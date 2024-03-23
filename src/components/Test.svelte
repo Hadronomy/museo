@@ -2,7 +2,7 @@
   import { T, Canvas } from '@threlte/core';
   import { XR, Controller, XRButton } from '@threlte/xr';
   import { OrbitControls, useProgress } from '@threlte/extras';
-  import { Studio, Theatre } from '@threlte/theatre';
+  import { Studio } from '@threlte/theatre';
   import { tweened } from 'svelte/motion';
   import { fade } from 'svelte/transition';
 
@@ -35,10 +35,9 @@
 {/if}
 
 <div class="relative min-h-dvh w-full">
+  <Studio enabled={isDev} />
   <Canvas>
-    <Theatre studio={{enabled: isDev}}>
-      <Scene />
-    </Theatre>
+    <Scene />
     <XR>
       <Controller left />
       <Controller right />
