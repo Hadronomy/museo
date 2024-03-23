@@ -35,9 +35,8 @@
 {/if}
 
 <div class="relative min-h-dvh w-full">
-  <Studio enabled={!isDev} />
   <Canvas>
-    <Theatre>
+    <Theatre studio={{enabled: isDev}}>
       <Scene />
     </Theatre>
     <XR>
