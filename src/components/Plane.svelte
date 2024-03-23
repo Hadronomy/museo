@@ -12,12 +12,14 @@ Title: Stylized WW1 Plane
   import { T, forwardEventHandlers } from '@threlte/core'
   import { useGltf, useGltfAnimations } from '@threlte/extras'
 
-  export const ref = new Group()
+  export const ref = new Group();
 
-  const gltf = useGltf('/models/plane/scene.gltf')
-  export const { actions, mixer } = useGltfAnimations(gltf, ref)
+  const gltf = useGltf('/models/plane/scene.gltf');
+  export const { actions, mixer } = useGltfAnimations(gltf, ref);
 
   const component = forwardEventHandlers()
+
+  $: $actions['Take 001']?.play();
 </script>
 
 <T is={ref} dispose={false} {...$$restProps} bind:this={$component}>
