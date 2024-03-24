@@ -1,20 +1,20 @@
 <script>
-  import { T, Canvas } from '@threlte/core';
-  import { XR, Controller, XRButton } from '@threlte/xr';
-  import { OrbitControls, useProgress } from '@threlte/extras';
-  import { Studio } from '@threlte/theatre';
-  import { tweened } from 'svelte/motion';
-  import { fade } from 'svelte/transition';
+import { Canvas, T } from '@threlte/core';
+import { OrbitControls, useProgress } from '@threlte/extras';
+import { Studio } from '@threlte/theatre';
+import { Controller, XR, XRButton } from '@threlte/xr';
+import { tweened } from 'svelte/motion';
+import { fade } from 'svelte/transition';
 
-  import Scene from './Scene.svelte';
+import Scene from './Scene.svelte';
 
-  const isDev = import.meta.env.DEV;
+const isDev = import.meta.env.DEV;
 
-  const { progress } = useProgress();
-  const tweenedProgress = tweened($progress, {
-    duration: 800
-  });
-  $: tweenedProgress.set($progress);
+const { progress } = useProgress();
+const tweenedProgress = tweened($progress, {
+  duration: 800,
+});
+$: tweenedProgress.set($progress);
 </script>
 
 {#if $tweenedProgress < 1}

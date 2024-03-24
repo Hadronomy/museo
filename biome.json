@@ -43,6 +43,9 @@
       "include": ["*.svelte"],
       "linter": {
         "rules": {
+          "suspicious": {
+            "noConfusingLabels": "off"
+          },
           "style": {
             "useConst": "off"
           }
