@@ -26,6 +26,7 @@
     "indentStyle": "space"
   },
   "javascript": {
+    "globals": ["Astro"],
     "formatter": {
       "arrowParentheses": "always",
       "jsxQuoteStyle": "double",
@@ -37,6 +38,18 @@
       "bracketSameLine": false
     }
   },
+  "overrides": [
+    {
+      "include": ["*.svelte"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off"
+          }
+        }
+      }
+    }
+  ],
   "vcs": {
     "enabled": true,
     "clientKind": "git",
