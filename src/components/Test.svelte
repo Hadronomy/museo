@@ -49,7 +49,10 @@ $: tweenedProgress.set($progress);
       </svelte:fragment>
     </XR>
   </Canvas>
-  <XRButton mode="immersive-ar" />
+  <XRButton mode="immersive-ar" sessionInit={{
+    requiredFeatures: ['image-tracking'],
+    optionalFeatures: ['local-floor', 'bounded-floor', 'hand-tracking', 'layers']
+  }}/>
 </div>
 
 <style>
